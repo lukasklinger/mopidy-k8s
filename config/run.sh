@@ -4,4 +4,4 @@
 yt-dlp -U
 
 # run mopidy
-mopidy --config /home/mopidy/mopidy.conf
+mopidy --config /home/mopidy/conf/mopidy.conf
