@@ -27,6 +27,7 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v4
+        with:
           images: lukasklinger/mopidy-k8s
 
       - name: Build and push Docker image
