@@ -6,9 +6,6 @@ on:
   release:
     types: [published]
 
-env:
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
@@ -30,7 +27,7 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v4
-          images: ${{ env.IMAGE_NAME }}
+          images: lukasklinger/mopidy-k8s
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
