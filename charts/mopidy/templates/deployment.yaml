@@ -29,17 +29,19 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
             - name: config
-              mountPath: "/home/mopidy/conf"
-              readOnly: true
+              mountPath: "/etc/mopidy"
+              readOnly: false
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
+            initialDelaySeconds: 60
             httpGet:
               path: /
               port: http
           readinessProbe:
+            initialDelaySeconds: 60
             httpGet:
               path: /
               port: http

@@ -33,7 +33,7 @@ RUN pip3 install yt-dlp
 RUN mkdir /home/mopidy && chown -R mopidy /home/mopidy
 
 # copy config file
-COPY config/mopidy.conf /home/mopidy/conf/mopidy.conf
+COPY config/mopidy.conf /etc/mopidy/mopidy.conf
 
 # copy run script
 COPY config/run.sh /home/mopidy/run.sh
