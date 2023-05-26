@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  mopidy:
+  - apiVersion: v2
+    appVersion: v3.4.1
+    created: "2023-05-26T21:10:58.363360311Z"
+    description: A Helm chart for Mopidy. Meant to stream audio to Snapcast.
+    digest: d31efe0b9bc6ef654217fcae07cf6f96de0973a960ae0ef8df695a9828397d82
+    name: mopidy
+    type: application
+    urls:
+    - https://github.com/lukasklinger/mopidy-k8s/releases/download/mopidy-0.1.1/mopidy-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-05-26T21:10:58.363364711Z"
