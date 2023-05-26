@@ -27,6 +27,8 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["bash"]
+          args: ["-c", "yt-dlp -U; mopidy --config /etc/mopidy/mopidy.conf"]
           volumeMounts:
             - name: config
               mountPath: "/etc/mopidy"

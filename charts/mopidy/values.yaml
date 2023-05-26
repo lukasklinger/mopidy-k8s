@@ -57,7 +57,7 @@ affinity: {}
 config:
   snapcast:
     host: server.snapcast.chaosdorf.space
-    port: 4951
+    port: 4850
 
 configTemplate: |
   [core]
@@ -74,7 +74,7 @@ configTemplate: |
   config_file = 
 
   [audio]
-  mixer = none
+  mixer = software
   mixer_volume = 100
   output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! tcpclientsink host={{ .Values.config.snapcast.host }} port={{ .Values.config.snapcast.port }}
   buffer_time = 

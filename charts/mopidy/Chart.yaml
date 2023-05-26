@@ -4,5 +4,5 @@ description: A Helm chart for Mopidy. Meant to stream audio to Snapcast.
 
 type: application
 
-version: 0.1.0
+version: 0.1.1
 appVersion: "v3.4.1"
