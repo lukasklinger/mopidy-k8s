@@ -36,12 +36,14 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
-            initialDelaySeconds: 60
+            initialDelaySeconds: 15
+            periodSeconds: 20
             httpGet:
               path: /
               port: http
           readinessProbe:
-            initialDelaySeconds: 60
+            initialDelaySeconds: 15
+            periodSeconds: 20
             httpGet:
               path: /
               port: http

@@ -57,7 +57,7 @@ affinity: {}
 config:
   snapcast:
     host: server.snapcast.chaosdorf.space
-    port: 4850
+    port: 4951
 
 configTemplate: |
   [core]
@@ -68,7 +68,7 @@ configTemplate: |
   restore_state = false
 
   [logging]
-  verbosity = 0
+  verbosity = 1
   format = %(levelname)-8s %(asctime)s [%(process)d:%(threadName)s] %(name)s\n  %(message)s
   color = true
   config_file = 

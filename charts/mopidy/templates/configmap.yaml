@@ -7,5 +7,5 @@ metadata:
     {{- include "mopidy.labels" $ | nindent 4 }}
 
 data:
-  snapserver.conf: |
+  mopidy.conf: |
     {{- tpl .Values.configTemplate $ | nindent 4 }}
